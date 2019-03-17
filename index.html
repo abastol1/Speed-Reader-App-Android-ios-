@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spped Reader App</title>
+	<meta charset="utf-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1" >
+
+	<!-- jQuery Mobile CDN -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>	
+</head>
+<body>
+
+
+	<!-- ----------------------------------------------------------------------------------- -->
+	<!-- Each view or pafe on the mobile device is identified with an element with the data=role="page" -->
+	<!-- Page 1 -->
+	<div data-role="page" id="page1">
+		<div data-role="header">
+
+		</div>
+
+		<div role="main" class="ui-content">
+			<a data-role="button" href="#page2" data-transition="flip"> Go to page 2 </a>
+			<!-- Dialogue Link -->
+			<a data-role="button" href="dialog.html" data-transition="slide" data-rel="dialog" rel="external" data-theme="b"> Open Dialogue </a>
+
+			<div id="taphere">
+				<p>Perhaps we've grown too used to performances like this from Leo Messi, but that's what makes him the best, he is just way too consistent. As a rival fan, it's both frustrating and euphoric to watch the best player in the world play. </p>
+			</div>
+
+		</div>
+
+		<div data-role="footer" data-position= "fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1" data-transition="pop" class="ui-btn-active ui-state-persist" data-icon="home">Home</a></li>
+					<li> <a href="#page2" data-transition="pop" data-icon="info">About </a></li>
+					<li> <a href="#page3" data-transition="pop" data-icon="mail">Contact </a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- Page 1 -->
+
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Each view or pafe on the mobile device is identified with an element with the data=role="page" -->
+	<!-- Page2 -->
+	<div data-role="page" id="page2" data-theme="a">
+		<div data-role="header">
+
+
+			<div role="main" class="ui-content">
+				<ul data-role="listview" data-filter="true">
+					<li data-role="list-divider"> Main Information</li>
+					<li><a href=""><img src="listicon.png" class="ui-li-icon"> Company Details</a></li>
+					<li><a href=""><img src="listicon.png" class="ui-li-icon"> Company History</a></li>
+
+					<li data-role="list-divider">Branches</li>
+					<li>
+						<a href="">
+							<img src="listicon.png"> 
+							<h1>London</h1>
+							<p>Sales and Marketing Team </p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="listicon.png"> 
+							<h1>Bedford</h1>
+							<p>Development Team </p>
+						</a>
+					</li>
+
+					<li data-role="list-divider">Achievements</li>
+					<li><a href=""> Our Portfolio1</a></li>
+					<li><a href=""> Our Portfolio2</a></li>
+
+
+				</ul>
+
+			</div>
+
+			<div data-role="footer" data-position= "fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1" data-transition="pop" data-icon="home">Home</a></li>
+						<li> <a href="#page2"  class="ui-btn-active ui-state-persist"  data-transition="pop" data-icon="info">About </a></li>
+						<li> <a href="#page3" data-transition="pop" data-icon="mail">Contact </a></li>
+					</div>
+				</div>
+			</div>
+		</div><!-- Page 2 -->
+
+
+		<!-- --------------------------------------------------------------------- -->
+
+		<!-- Page3 -->
+		<div data-role="page" id="page3" data-theme="a">
+			<div data-role="header">
+
+			</div>
+
+			<div role="main" class="ui-content">
+				<!-- Grid System -->
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<a href="#" data-role="button"> Email </a>
+						<p> I go to Ramapo College of New Jersey. The location is 505 Ramapo Valley Road. United States, North America</p> 
+
+					</div>
+
+					<div class="ui-block-b">
+						<a href="#" data-role="button"> Live Chat</a>
+						<p> I go to Ramapo College of New Jersey. The location is 505 Ramapo Valley Road. United States, North America</p> 
+
+					</div>
+
+					<div class="ui-block-c">
+						<a href="#" data-role="button"> Phone </a>
+						<p> I go to Ramapo College of New Jersey. The location is 505 Ramapo Valley Road. United States, North America</p> 
+
+					</div>
+				</div>
+
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1" data-transition="pop" data-icon="home">Home</a></li>
+						<li> <a href="#page2" data-transition="pop" data-icon="info">About </a></li>
+						<li> <a href="#page3"  class="ui-btn-active ui-state-persist" data-transition="pop" data-icon="mail">Contact </a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- Page 3 -->
+
+
+
+		<script>
+
+			
+		</script>
+	</body>
+	</html>
