@@ -31,41 +31,45 @@
 				<p>For an efficient experience</p>
 			</div>
 
-			<!-- Grid layout for label for the slider -->
-			<div class="ui-grid-a">
-				<div class="ui-block-a">
-					<div>
-						FONT SIZE: <span id="fontsize"> 50px </span>
+
+			<!-- All the sliders in one div -->
+			<div id="controller">
+				<!-- Grid layout for label for the slider -->
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<div>
+							FONT SIZE: <span id="fontsize"> 50px </span>
+						</div>
+					</div>
+
+					<div class="ui-block-b">
+						<div>
+							<span>300 </span> WORDS PER MINUTE
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Slider grid: Font size and speed -->
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<form class="full-width-slider">
+							    <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
+						</form>
+					</div>
+
+					<div class="ui-block-b">
+						<form class="full-width-slider">
+							    <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
+						</form>
 					</div>
 				</div>
 
-				<div class="ui-block-b">
-					<div>
-						<span>300 </span> WORDS PER MINUTE
-					</div>
-				</div>
-
+				<form class="full-width-slider">
+					    <label for="progressslider" >PROGRESS: <span id="percentage">0</span>%</label>
+					    <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
+				</form>
 			</div>
-
-			<!-- Slider grid: Font size and speed -->
-			<div class="ui-grid-a">
-				<div class="ui-block-a">
-					<form class="full-width-slider">
-						    <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
-					</form>
-				</div>
-
-				<div class="ui-block-b">
-					<form class="full-width-slider">
-						    <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
-					</form>
-				</div>
-			</div>
-
-			<form class="full-width-slider">
-				    <label for="progressslider" >PROGRESS: <span id="percentage">0</span>%</label>
-				    <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
-			</form>
 
 
 			<!-- This is the read word while reading -->
@@ -198,7 +202,7 @@
 
 
 
-		<script>
+		<script src="script.js">
 
 			
 		</script>
