@@ -94,10 +94,54 @@ $(function(){
 
 
 	// Change speed
+	$("#speedslider").on("slidestop", function(event, ui){
+		// refresh the slider to get the new value
+		$("#speedslider").slider('refresh');
 
+		// get the font size from the font size slider
+		var sliderValue = parseInt($("#speedslider").val());
+		// change the font size span
+		$("#speed").text(sliderValue);
+
+		// stop reading
+		clearInterval(action);
+
+		// change frequency using the value of slider
+		frequency = 60000 / sliderValue;
+
+		//resume reading
+		if ( reading == true){
+			action = setInterval(read, frequency);
+		}
+	});
 
 
 	// progress slider
+	$("#progressslider").on("slidestop", function(event, ui){
+		// refresh the slider to get the new value
+		$("#progressslider").slider('refresh');
+
+		// get the font size from the font size slider
+		var sliderValue = parseInt($("#progressslider").val());
+		// change the font size span
+
+		// stop reading
+		clearInterval(action);
+
+		// change counter
+		counter = sliderValue;
+
+		//change the word in the result
+		$("#result").text(wordArray[counter]);
+
+		// change the value of progress
+		$("#percentage").text(Math((counter/wordArray.length - 1) * 100));
+
+		//resume reading
+		if ( reading){
+			action = setInterval(read, frequency);
+		}
+	});
 
 
 
