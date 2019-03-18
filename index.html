@@ -9,6 +9,10 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>	
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
@@ -18,18 +22,73 @@
 	<!-- Page 1 -->
 	<div data-role="page" id="page1">
 		<div data-role="header">
-
 		</div>
 
 		<div role="main" class="ui-content">
-			<a data-role="button" href="#page2" data-transition="flip"> Go to page 2 </a>
-			<!-- Dialogue Link -->
-			<a data-role="button" href="dialog.html" data-transition="slide" data-rel="dialog" rel="external" data-theme="b"> Open Dialogue </a>
-
-			<div id="taphere">
-				<p>Perhaps we've grown too used to performances like this from Leo Messi, but that's what makes him the best, he is just way too consistent. As a rival fan, it's both frustrating and euphoric to watch the best player in the world play. </p>
+			<!-- Header -->
+			<div class="header">
+				<h1>Speed Reader App</h1>
+				<p>For an efficient experience</p>
 			</div>
 
+			<!-- Grid layout for label for the slider -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div>
+						FONT SIZE: <span id="fontsize"> 50px </span>
+					</div>
+				</div>
+
+				<div class="ui-block-b">
+					<div>
+						<span>300 </span> WORDS PER MINUTE
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Slider grid: Font size and speed -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<form class="full-width-slider">
+						    <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
+					</form>
+				</div>
+
+				<div class="ui-block-b">
+					<form class="full-width-slider">
+						    <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
+					</form>
+				</div>
+			</div>
+
+			<form class="full-width-slider">
+				    <label for="progressslider" >PROGRESS: <span id="percentage">0</span>%</label>
+				    <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
+			</form>
+
+
+			<!-- This is the read word while reading -->
+			<div id="result">
+				This is result
+			</div>
+
+			<!-- Error message -->
+			<div id="error">
+				Please Paste text in the box
+			</div>
+
+
+			<!-- User input -->
+			<div id="inputs">
+				<!-- Text input -->
+				<textarea id="userInput"></textarea>
+				<!-- Button -->
+				<button id="start">Start Reading</button>
+				<button id="new">New</button>
+				<button id="pause">Pause</button>
+				<button id="resume">Resume</button>
+			</div>
 		</div>
 
 		<div data-role="footer" data-position= "fixed">
